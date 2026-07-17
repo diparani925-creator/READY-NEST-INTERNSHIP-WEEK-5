@@ -94,7 +94,7 @@ If you prefer not to use Render Blueprints, deploy manually:
    - **Root Directory:** (Leave empty, we will use the command prefix)
    - **Environment:** `Node`
    - **Plan:** `Free`
-   - **Build Command:** `cd backend && npm install && npm run prisma:generate && npm run build`
+   - **Build Command:** `cd backend && npm install --production=false && npm run prisma:generate && npm run build`
    - **Start Command:** `cd backend && npm run prisma:deploy && npm run start`
    - **Advanced Settings -> Environment Variables:** Add the following keys:
      - `NODE_ENV` = `production`
