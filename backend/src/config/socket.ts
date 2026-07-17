@@ -37,7 +37,7 @@ export const initSocket = (server: HttpServer): SocketServer => {
         return next(new Error('Authentication failed: cookies missing'));
       }
 
-      const cookies = (cookie as any).parseCookie(cookieHeader);
+      const cookies = cookie.parse(cookieHeader);
       const token = cookies.access_token;
 
       if (!token) {
